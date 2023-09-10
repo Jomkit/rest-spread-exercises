@@ -13,3 +13,17 @@ describe('findMin() tests', function(){
         expect(findMin(144,23,55,120)).toEqual(23);
     })
 })
+
+describe('mergeObjects() tests', function(){
+    it('should take two objects and return a new object containing all keys and values of the first two', function(){
+        expect(mergeObjects({a:1, b:2}, {c:3, d:4})).toBeInstanceOf(Object);
+        expect(mergeObjects({a:1, b:2}, {c:3, d:4})).toEqual({a:1, b:2, c:3, d:4});
+        })
+})
+
+describe('doubleAndReturnArgs() tests', function(){
+    it('should take an array and a variable number of args, then return a new array that contains the first array values and the arguments doubled', function(){
+        expect(doubleAndReturnArgs([1,2,3],4,4)).toEqual([1,2,3,8,8]);
+        expect(doubleAndReturnArgs([2],10,4)).toEqual([2,20,8]);
+    })
+})
